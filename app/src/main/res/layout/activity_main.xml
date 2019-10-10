@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <!-- Part 1: Create the visual elements/UI -->
+
+
+    <!-- RelativeLayouts allow you to orient things "relative" to each other-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/player1_text"
+            android:textSize="30dp"
+            android:text="Player 1:" />
+
+        <!-- Based on the first TextView, create a new textview for keeping track of player 2 score.
+             Make sure to specify an unique ID, textsize, and set the text to be "Player 2: "
+             Then, use the property "android:layout_below="@+id/player1_text" to orient it underneath the first one-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reset_button"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="Reset"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <!-- A LinearLayout allows you to assign weights to parts, so that they will be divided evenly
+         We will use 3 LinearLayouts to create 3 rows of 3 buttons for the Tic Tac Toe board-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <!-- Make sure that each button has a unique id so we can access it later -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/button_00"
+            android:textSize="60sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/button_01"
+            android:textSize="60sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/button_02"
+            android:textSize="60sp" />
+
+    </LinearLayout>
+
+    <!-- Row 2-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/button_10"
+            android:textSize="60sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/button_11"
+            android:textSize="60sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/button_12"
+            android:textSize="60sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <!-- Do this last row on your own! Watch how the size of each button automatically changes as you add them
+             Also make sure that the IDs are button_20, button_21, and button_23 as we will be referencing them later-->
+
+    </LinearLayout>
+
+</LinearLayout>
